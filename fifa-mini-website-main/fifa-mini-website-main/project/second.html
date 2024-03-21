@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About | VSPORTS</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+    <!-- icon -->
+    <link rel="icon" type="image/x-icon" href="img/logo.png" />
+    <!-- js -->
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/app.js"></script>
+    <!-- css -->
+    <!-- comman -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/second.css">
+</head>
+<body>
+
+        <!-- navbar -->
+		<nav class="navbar fixed-top navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="second.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  active" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  active" href="search.html">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="primary">
+                            <a class="nav-link  active" href="newsletter.html">
+                                Signup for newsletter
+                            </a>
+                        </button>
+                      </li>
+                </ul>
+                <!-- login  -->
+                <span class="navbar-text">
+                    <ul>
+                        <li class="nav-item dropdown" id="login_section">
+                            <a class="nav-link dropdown-toggle  active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Account
+                            </a>
+                            <ul class="dropdown-menu" >
+                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modal_login">Login</a></li>
+                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modal_signup">Signup</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="references.html">References</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </span>
+              </div>
+            </div>
+          </nav>
+        
+     
+        
+    
+      <!-- login page -->
+      <div class="modal fade" id="modal_login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="input_email_login" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="input_password_login">
+                    </div>
+                    <button id="login_btn" class="btn btn-primary" onclick="login()">Login</button>
+                  </form>
+    
+                  <p>Create an account <a href="#" data-bs-toggle="modal" data-bs-target="#modal_signup">Signup</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+    
+    
+      <!-- signup -->
+      <div class="modal fade" id="modal_signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Signup</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="signup-email" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="signup-password">
+                    </div>
+                    <button type="submit" id="signup_btn" class="btn btn-primary">Signup</button>
+                  </form>
+    
+                  <p>Already Have an account <a href="#" data-bs-toggle="modal" data-bs-target="#modal_login">Log in</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about container">
+        <section class="about1">
+            <p>
+                The 2022 FIFA World Cup is an international football tournament contested by the men's national teams of FIFA's member associations. The 22nd FIFA World Cup is taking place in Qatar from 20 November to 18 December 2022; it is the first World Cup to be held in the Arab world and Muslim world, and the second held entirely in Asia after the 2002 tournament in South Korea and Japan. France are the defending champions, having defeated Croatia 4–2 in the 2018 final. At an estimated cost of over $220 billion, it is the most expensive World Cup ever held; this figure is disputed by Qatari officials, including organising CEO Nasser Al Khater, who said the true cost is $8 billion, and other figures relate to overall infrastructure development since the World Cup was awarded to Qatar in 2010.
+            </p>
+            <p>
+                This tournament is set to be the last with 32 participating teams, with the field to increase to 48 teams for the 2026 edition. To avoid the extremes of Qatar's hot climate, this World Cup is being held during November and December. It is being played in a reduced timeframe of 29 days with 64 matches to be played in eight venues across five cities. The Qatar national football team entered the event automatically, their first World Cup, alongside 31 teams who were determined by the qualification process. Qatar lost all three group matches; they became the first hosts to lose every game, the earliest host nation eliminated, and the second host (after South Africa in 2010) not to progress past the first stage.
+            </p>
+            <p>
+                In the first round of the tournament finals, the teams competed in eight round-robin groups of four teams for points, with the top two teams in each group proceeding. These 16 teams advanced to the knockout stage, where three rounds of play to decide which teams would participate in the final, which will be held on 18 December 2022 at Lusail Stadium, coinciding with Qatar's National Day.
+            </p>
+            <p>
+                The choice to host the World Cup in Qatar has been a source of controversy due to Qatar's treatment of migrant workers, women, and its position on LGBT rights as well as Qatar's climate, lack of a strong football culture, scheduling changes, and allegations of bribery for hosting rights and wider FIFA corruption.
+            </p>
+
+      </div>
+
+		<section class="heading-team" id="teams">
+			<h2 class="text-center">Here is the list of countries participating in FIFA 2022</h2>
+		</section>
+
+		<section class="features-icons bg-light text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/ARG?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Argentina</h3>
+                            <p class="lead mb-0">(ARG)</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/AUS?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Australia</h3>
+                            <p class="lead mb-0">(AUS)</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/BEL?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Belgium</h3>
+                            <p class="lead mb-0">(BEL)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/BRA?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Brazil</h3>
+                            <p class="lead mb-0">(BRA)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/CMR?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Cameroon</h3>
+                            <p class="lead mb-0">(CMR)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/CAN?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Canada</h3>
+                            <p class="lead mb-0">(CAN)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/CRC?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Costa Rica</h3>
+                            <p class="lead mb-0">(CRC)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/CRO?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Croatia</h3>
+                            <p class="lead mb-0">(CRO)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/DEN?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Denmark</h3>
+                            <p class="lead mb-0">(DEN)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/ECU?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Ecuador</h3>
+                            <p class="lead mb-0">(ECU)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/ENG?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>England</h3>
+                            <p class="lead mb-0">(ENG)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/FRA?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>France</h3>
+                            <p class="lead mb-0">(FRA)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/GER?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Germany</h3>
+                            <p class="lead mb-0">(GER)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/GHA?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Ghana</h3>
+                            <p class="lead mb-0">(GHA)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/IRN?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Iran</h3>
+                            <p class="lead mb-0">(IRN)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/JPN?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Japan</h3>
+                            <p class="lead mb-0">(JPN)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/KOR?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Korea Republic</h3>
+                            <p class="lead mb-0">(KOR)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/MEX?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Mexico</h3>
+                            <p class="lead mb-0">(MEX)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/MAR?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Morocco</h3>
+                            <p class="lead mb-0">(MAR)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/NED?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Netherlands</h3>
+                            <p class="lead mb-0">(NED)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/POL?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Poland</h3>
+                            <p class="lead mb-0">(POL)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/POR?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Portugal</h3>
+                            <p class="lead mb-0">(POR)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/QAT?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Qatar</h3>
+                            <p class="lead mb-0">(QAT)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/KSA?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Saudi Arabia</h3>
+                            <p class="lead mb-0">(KSA)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/SEN?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Senegal</h3>
+                            <p class="lead mb-0">(SEN)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/SRB?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Serbia</h3>
+                            <p class="lead mb-0">(SRB)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/ESP?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Spain</h3>
+                            <p class="lead mb-0">(ESP)</p>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/SUI?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+                            <h3>Switzerland</h3>
+                            <p class="lead mb-0">(SUI)</p>
+                        </div>
+					</div>
+					<div class="col-lg-4">
+						<div class="features-icons-item mx-auto mb-0 mb-lg-3">
+							<div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/SUI?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+							<h3>Switzerland</h3>
+							<p class="lead mb-0">(SUI)</p>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="features-icons-item mx-auto mb-0 mb-lg-3">
+							<div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/TUN?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+							<h3>Tunisia</h3>
+							<p class="lead mb-0">(TUN)</p>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="features-icons-item mx-auto mb-0 mb-lg-3">
+							<div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/USA?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+							<h3>United States</h3>
+							<p class="lead mb-0">(USA)</p>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="features-icons-item mx-auto mb-0 mb-lg-3">
+							<div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/URU?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+							<h3>Uruguay</h3>
+							<p class="lead mb-0">(URU)</p>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="features-icons-item mx-auto mb-0 mb-lg-3">
+							<div class="features-icons-icon d-flex"><img src="https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/WAL?tx=c_fill,g_auto,q_auto,w_94,h_62" alt=""></div>
+							<h3>Wales</h3>
+							<p class="lead mb-0">(WAL)</p>
+						</div>
+				</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- stadium -->
+        <section class="heading-staduim" id="stadiums">
+			<h2 class="text-center">Stadiums</h2>
+		</section>
+
+        <section class="features-icons bg-light text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="./img/stadium-974.avif" alt=""></div>
+                            <p class="stadium-name">Stadium 974</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="./img/lusail-stadium.avif" alt=""></div>
+                            <p class="stadium-name">Lusail Stadium</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="./img/khalifa-international-stadium.jpg" alt=""></div>
+                            <p class="stadium-name">Khalifa International Stadium</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="./img/education-city-stadium.jpg" alt=""></div>
+                            <p class="stadium-name">Education City Stadium</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="./img/ai-thumama-stadium.jpg" alt=""></div>
+                            <p class="stadium-name">Al Thumama Stadium</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="./img/ai-janoub-stadium.jpg" alt=""></div>
+                            <p class="stadium-name">Al Janoub Stadium</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="./img/ai-bayt-stadium.jpg" alt=""></div>
+                            <p class="stadium-name">Al Bayt Stadium</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><img src="./img/ahmad-bin-ali-stadium.jpg" alt=""></div>
+                            <p class="stadium-name">Ahmad bin Ali Stadium</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+  	<!-- footer -->
+	<footer class="text-center text-lg-center bg-light text-muted">
+		<div class="row container-fluid">
+			<div class="col-6">
+				<h6 class="text-uppercase fw-bold mb-4">
+					Menu
+				</h6>
+				<p>
+					<a href="index.html" class="text-reset">Home</a>
+				</p>
+				<p>
+					<a href="second.html" class="text-reset">About</a>
+				</p>
+				<p>
+					<a href="gallery.html" class="text-reset">Gallery</a>
+				</p>
+				<p>
+					<a href="newsletter.html" class="text-reset">Sign up for newsletter</a>
+				</p>
+			</div>
+			<div class="col-6">
+				<h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+				<p><i class="fas fa-home me-3"></i> QC, Canada</p>
+				<p>
+					<i class="fas fa-envelope me-3"></i>
+					info@vsports.com
+				</p>
+				<p><i class="fas fa-phone me-3"></i> + 01 234 567 89</p>
+			</div>
+		</div>
+	
+		<!-- Copyright -->
+		<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+		© 2022 Copyright:
+		<a class="text-reset fw-bold" href="https://www.github.com/thevarungrovers">Varun Grover</a>
+		</div>
+	</footer>
+
+    <a href="#" class="top"><img src="img/up-arrow.png" alt="up-arrow"></a>
+
+        
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+	</body>
+</html>

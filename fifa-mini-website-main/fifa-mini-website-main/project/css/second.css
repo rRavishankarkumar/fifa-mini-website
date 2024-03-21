@@ -1,0 +1,16 @@
+.about1{
+  margin-top: 100px;
+}
+.features-icons {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+.features-icons .features-icons-item {
+  max-width: 20rem;
+}
+.features-icons .features-icons-item .features-icons-icon {
+  height: 7rem;
+}
+.features-icons .features-icons-item .features-icons-icon img {
+  margin: 0 auto;
+}

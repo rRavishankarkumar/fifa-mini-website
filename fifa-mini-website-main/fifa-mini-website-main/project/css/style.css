@@ -1,0 +1,37 @@
+*{
+    /* font */
+    font-family: 'Zen Dots', cursive;
+    scroll-behavior: smooth;
+}
+
+/* navbar */
+nav{
+    z-index: 10;
+}
+ul{
+    list-style: none;
+}
+
+/* footer */
+footer{
+    padding-top: 50px;
+}
+
+/* top */
+.top{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    animation: animate-top 1s ease-in alternate infinite;
+}
+@keyframes animate-top {
+    0%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.top img{
+    height: 35px;
+}

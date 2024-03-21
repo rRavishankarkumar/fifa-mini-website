@@ -1,0 +1,77 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    background: #005AA7;
+    background: -webkit-linear-gradient(to left, #FFFDE4, #005AA7);
+    background: linear-gradient(to left, #FFFDE4, #005AA7);
+}
+
+/* background image */
+.bg {
+    z-index: 4;
+    background-image: url("../img/fifa_bg.png");
+    height: 80%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* welcome text */
+.welcome-text{
+    z-index: 5;
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 40px;
+    background: linear-gradient(to right, #000000,
+    #FFFFFF);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.qatar{
+    background: linear-gradient(to right, #f32170, #ff6b08,#cf23cf, #eedd44);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+}
+
+/* prize money */
+.table-border-bottom{
+    border-bottom : 1px dashed;
+}
+
+.prize-money, .where-to-watch{
+    margin-top: 40px;
+}
+.prize-money table{
+    width: 100%;
+}
+
+.prize-money table td:nth-child(2), .prize-money table td:nth-child(3), .prize-money h3 {
+    text-align: center;
+}
+
+/* where to watch */
+.where-to-watch h3, .prize-money h3{
+    background: #ADA996;
+    background: -webkit-linear-gradient(to left, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    background: linear-gradient(to left, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    padding: 20px;
+}
+
+.where-to-watch div {
+    height: 300px;
+}
+
+
+@media screen and (min-width:700px) {
+    .welcome-text{
+        left: 20%;
+        font-size: 60px;
+    }
+    .where-to-watch div img{
+        height: 290px;
+    }
+}

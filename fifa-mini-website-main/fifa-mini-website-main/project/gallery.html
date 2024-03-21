@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home | VSPORTS</title>
+	<!-- google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+	<!-- bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<!-- Bootstrap icons-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+	<!-- icon -->
+	<link rel="icon" type="image/x-icon" href="img/logo.png" />
+	<!-- js -->
+	<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/jquery-3.6.1.min.js"></script>
+	<script src="js/app.js"></script>
+	<!-- css -->
+	<!-- comman -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		.gallery-heading{
+		  margin-top: 100px;
+		}
+		.box{
+			margin: 10px;
+		}
+		.box .heading{
+			border-bottom: 1px dashed;
+		}
+		.search-form{
+		  margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<!-- navbar -->
+	<nav class="navbar fixed-top navbar-expand-lg bg-light">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"></a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="second.html">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link  active" href="gallery.html">Gallery</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link  active" href="search.html">Search</a>
+				</li>
+				<li class="nav-item">
+					<button class="primary">
+						<a class="nav-link  active" href="newsletter.html">
+							Signup for newsletter
+						</a>
+					</button>
+				  </li>
+			</ul>
+			<!-- login  -->
+			<span class="navbar-text">
+				<ul>
+					<li class="nav-item dropdown" id="login_section">
+						<a class="nav-link dropdown-toggle  active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Account
+						</a>
+						<ul class="dropdown-menu" >
+							<li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modal_login">Login</a></li>
+							<li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modal_signup">Signup</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="references.html">References</a></li>
+						</ul>
+					</li>
+				</ul>
+			</span>
+		  </div>
+		</div>
+	  </nav>
+	
+ 
+	
+
+  <!-- login page -->
+  <div class="modal fade" id="modal_login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<form>
+				<div class="mb-3">
+				  <label for="exampleInputEmail1" class="form-label">Email address</label>
+				  <input type="email" class="form-control" id="input_email_login" aria-describedby="emailHelp">
+				</div>
+				<div class="mb-3">
+				  <label for="exampleInputPassword1" class="form-label">Password</label>
+				  <input type="password" class="form-control" id="input_password_login">
+				</div>
+				<button id="login_btn" class="btn btn-primary" onclick="login()">Login</button>
+			  </form>
+
+			  <p>Create an account <a href="#" data-bs-toggle="modal" data-bs-target="#modal_signup">Signup</a></p>
+		</div>
+	  </div>
+	</div>
+  </div>
+	
+
+
+  <!-- signup -->
+  <div class="modal fade" id="modal_signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Signup</h1>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<form>
+				<div class="mb-3">
+				  <label for="exampleInputEmail1" class="form-label">Email address</label>
+				  <input type="email" class="form-control" id="signup-email" aria-describedby="emailHelp">
+				</div>
+				<div class="mb-3">
+				  <label for="exampleInputPassword1" class="form-label">Password</label>
+				  <input type="password" class="form-control" id="signup-password">
+				</div>
+				<button type="submit" id="signup_btn" class="btn btn-primary">Signup</button>
+			  </form>
+
+			  <p>Already Have an account <a href="#" data-bs-toggle="modal" data-bs-target="#modal_login">Log in</a></p>
+		</div>
+	  </div>
+	</div>
+  </div>
+
+	<h2 class="text-center gallery-heading">Click on different parts of image know more</h2>
+
+	<div class="img-container">
+	<img src="img/Soccer_pitch_dimensions.png" style="margin:10px 20px  ;" class="img-responsive img-fluid"  alt="" usemap="#soccer">
+	</div>
+
+	<map name="soccer">
+	<area shape="rect" coords="163,321,189,381" alt="Goal" href="#goal">
+	<area shape="rect" coords="1073,319,1100,381" alt="Goal" href="#goal">
+	<area shape="rect" coords="192,173,335,527" alt="penality" href="#penality">
+	<area shape="rect" coords="926,173,1073,527" alt="penality" href="#penality">
+	<area shape="circle" coords="633,349,78" alt="center_circle" href="#center_circle">
+	<area shape="rect" coords="193,72,1071,629" alt="Boundary" href="#boundary">
+	</map>
+
+	<div class="img-content" id="img-content">
+		<div class="box">
+			<div class="heading" id="boundary">
+				<h4>Pitch boundary</h4>
+			</div>
+			<div class="desc">
+				<p>
+					The pitch is rectangular in shape. The longer sides are called touchlines and the shorter sides are called the goal lines. The two goal lines are between 45 and 90 m (50 and 100 yd) wide and have to be of the same length. The two touchlines are between 90 and 120 m (100 and 130 yd) long and have to be of the same length. All lines on the ground are equally wide, not to exceed 12 cm (5 in). The corners of the pitch are marked by corner flags.
+				</p>
+				<p>
+					For international matches the field dimensions are more tightly constrained; the goal lines are between 64 and 75m wide (70 and 82yds) and the touchlines are between 100 and 110 m (110 and 120 yd) long. The majority of top-level professional football pitches, including those belonging to teams in the English Premier League, measure 112 yards (102.4m) to 115 (105.2m) yards long and 70 yards (64.0m) to 75 yards (68.6m) wide.
+				</p>
+				<p>
+					Although the term goal line is often taken to mean only that part of the line between the goalposts, in fact it refers to the complete line at either end of the pitch, from one corner flag to the other. In contrast the term byline (or by-line) is often used to refer to that portion of the goal line outside the goalposts. This term is commonly used in football commentaries and match descriptions, such as this example from a BBC match report: "Udeze gets to the left byline and his looping cross is cleared..."
+				</p>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="heading" id="goal">
+				<h4>Goals</h4>
+			</div>
+			<div class="desc">
+				<p>Goals are placed at the centre of each goal-line.[7] These consist of two upright posts placed equidistant from the corner flagposts, joined at the top by a horizontal crossbar. The inner edges of the posts are regulated to be 7.32 metres (24 ft) (wide) apart, and the lower edge of the crossbar is elevated to 2.44 metres (8 ft) above the pitch. As a result, the area that players shoot at is 17.86 sq. metres (192 sq. feet). Nets are usually placed behind the goal, though are not required by the Laws.</p>
+				<p>Goalposts and crossbars have to be white, and made of wood, metal or other approved material. Rules regarding the shape of goalposts and crossbars are somewhat more lenient, but they have to conform to a shape that does not pose a threat to players. Since the beginning of football there have always been goalposts, but the crossbar was not invented until 1875, before which a string between the goalposts was used.</p>
+				<p>A goal is scored when the ball wholly crosses the goal line between the goal-posts and beneath the crossbar, even if a defending player last touched the ball before it crossed the goal line (see own goal). A goal may, however, be ruled illegal (and void by the referee) if the player who scored or a member of their team commits an offence under any of the laws between the time the ball was previously out of play and the goal being scored. It is also deemed void if a player on the opposing team commits an offence before the ball has passed the line, as in the case of fouls being committed, a penalty awarded but the ball continued on a path that caused it to cross the goal line.</p>
+				<p>The football goal size for a junior match goal is approximately half the size of an adult sized match goal.</p>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="heading" id="penality">
+			<h4>Penalty and goal areas</h4>
+			</div>
+			<div class="desc">
+				<p>Two rectangular boxes are marked out on the pitch in front of each goal.</p>
+				<p>The goal area (colloquially the "six-yard box"), consists of the rectangle formed by the goal-line, two lines starting on the goal-line 5.5 metres (6 yd) from the goalposts and extending 5.5 metres (6 yd) into the pitch from the goal-line, and the line joining these, i.e. they are a rectangle 6yds by 20yds. Goal kicks and any free kick by the defending team may be taken from anywhere in this area. Indirect free kicks awarded to the attacking team within the goal area are taken from the point on the line parallel to the goal line (the "six-yard line") nearest where the infringement occurred; they cannot be taken any closer to the goal line. Similarly drop-balls that would otherwise occur closer to the goal line are taken on this line.</p>
+				<p>he penalty area (colloquially "the 18-yard box" or just "the box") is similarly formed by the goal-line and lines extending from it, but its lines start 16.5 metres (18 yd) from the goalposts and extend 16.5 metres (18 yd) into the field. i.e. this is a rectangle 44yds by 18 yds. This area has a number of functions, the most prominent being to denote where the goalkeeper may handle the ball and where a foul by a defender, usually punished by a direct free kick, becomes punishable by a penalty kick. Both the goal and penalty areas were formed as semicircles until 1902.</p>
+				<p>The penalty mark (colloquially "the penalty spot" or just "the spot") is 11 metres (12 yd) in front of the very centre of the goal: this is the point from where penalty kicks are taken.</p>
+				<p>The penalty arc (colloquially "the D") is marked from the outside edge of the penalty area, 9.15 metres (10 yd) from the penalty mark; this, along with the penalty area, marks an exclusion zone for all players other than the penalty kicker and defending goalkeeper during a penalty kick.</p>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="heading" id="circle">
+			<h4>Circle</h4>
+			</div>
+			<div class="desc">
+			<p>The centre circle is marked at 9.15 metres (10 yd) from the centre mark. Similar to the penalty arc, this indicates the minimum distance that opposing players have to keep at kick-off; the ball itself is placed on the centre mark. During penalty shootouts all players other than the two goalkeepers and the current kicker are required to remain within this circle.</p>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- footer -->
+	<footer class="text-center text-lg-center bg-light text-muted">
+		<div class="row container-fluid">
+			<div class="col-6">
+				<h6 class="text-uppercase fw-bold mb-4">
+					Menu
+				</h6>
+				<p>
+					<a href="index.html" class="text-reset">Home</a>
+				</p>
+				<p>
+					<a href="second.html" class="text-reset">About</a>
+				</p>
+				<p>
+					<a href="gallery.html" class="text-reset">Gallery</a>
+				</p>
+				<p>
+					<a href="search.html" class="text-reset">Search</a>
+				</p>
+				<p>
+					<a href="newsletter.html" class="text-reset">Sign up for newsletter</a>
+				</p>
+			</div>
+			<div class="col-6">
+				<h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+				<p><i class="fas fa-home me-3"></i> QC, Canada</p>
+				<p>
+					<i class="fas fa-envelope me-3"></i>
+					info@vsports.com
+				</p>
+				<p><i class="fas fa-phone me-3"></i> + 01 234 567 89</p>
+			</div>
+		</div>
+	
+		<!-- Copyright -->
+		<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+		© 2022 Copyright:
+		<a class="text-reset fw-bold" href="https://www.github.com/thevarungrovers">Varun Grover</a>
+		</div>
+	</footer>
+
+	<a href="#" class="top"><img src="img/up-arrow.png" alt="up-arrow"></a>
+
+	<!-- bootstrap js -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
